@@ -1,0 +1,51 @@
+nav{
+    background-color:rgb(20, 123, 20);
+    box-shadow: 0 0 10px rgba(0,0,0,0.65);
+}
+.navbar-nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+}
+
+.navbar-brand{
+    color: #fefefe;
+}
+.navbar-brand:hover{
+    color: #fefefe;
+}
+
+.nav-item .nav-link {
+    background-color:rgb(20, 123, 20);
+    color :#fefefe;
+    text-decoration: none;
+    padding : 10px 20px;
+    margin-right: 8px;
+    border : none;
+    border-radius: 25%;
+    font-size:16px;
+    cursor: pointer;
+    transition: background-color 0.3s,color 0.3s; /* Transition pour le fond et la couleur du texte */
+}
+
+.nav-item .nav-link :hover {
+    background-color: #fefefe; /* Fond blanc au survol */
+    color: rgb(20, 123, 20); /* Texte vert au survol */
+}
+
+.submit-btn{
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: #fefefe; /* Texte blanc */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Supprimer la bordure */
+    border-radius: 25px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur de la souris de type pointer */
+    transition: background-color 0.25s, color 0.25s; /* Transition pour le fond et la couleur du texte */
+}
+
+.submit-btn:hover {
+    color: #45a049; /* Changement de couleur au survol */
+    background-color : #fefefe
+}
+
