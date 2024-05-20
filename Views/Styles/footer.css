@@ -1,3 +1,48 @@
+.footer{
+    background-image: url('../photos/back.jpg');
+    background-position: center;
+    background-size: cover;
+    background-color: #c9cec9;
+}
 .footer-container{
-    background-color: rgb(144, 187, 224);
+    padding: 0 60px 0 60px;
+    
+}
+.submit-btn{
+    background-color: #4CAF50; /* Couleur de fond verte */
+    color: #fefefe; /* Texte blanc */
+    padding: 10px 20px; /* Espacement interne */
+    border: none; /* Supprimer la bordure */
+    border-radius: 25px; /* Coins arrondis */
+    font-size: 16px; /* Taille de la police */
+    cursor: pointer; /* Curseur de la souris de type pointer */
+    transition: background-color 0.25s, color 0.25s; /* Transition pour le fond et la couleur du texte */
+}
+
+.submit-btn:hover {
+    color: #45a049; /* Changement de couleur au survol */
+    background-color : #fefefe
+}
+
+.form-control{
+    border-radius: 10px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.brand{
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+.data {
+    font-style: normal;
+    font-size:16px;
+    font-family: Geneva, Verdana, sans-serif;
+}
+.fab a{
+    color : #4CAF50;
+    size: 80px;
+}
+.footer-container .rounded-circle{
+    margin-bottom: 30px;
 }

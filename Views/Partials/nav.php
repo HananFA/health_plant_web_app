@@ -14,9 +14,9 @@
         <div class="container-fluid">
         <div class="navbar-header">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#mobile_menu" aria-controls="mobile_menu" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"><img src="../photos/menu.png" width="30px" height="30px" alt="menu"></span>
                 </button>
-                <a href="./home.php" class="navbar-brand"><img src="././photos/logo.png" class="rounded-circle" width="50px" height="50px" alt="">Health Plant</a>
+                <a href="./home.php" class="navbar-brand"><img src="../photos/logo.png" class="rounded-circle" width="50px" height="50px" alt=""> Health Plant</a>
             </div>
 
             <div class="collapse navbar-collapse" id="mobile_menu">
@@ -32,7 +32,7 @@
                     <input type="submit" value="Rechercher" class="submit-btn"/>
                 </form>
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span><img src="././photos/profil.png" alt="" width="30px" height="30px"> Profile</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#"><span class="glyphicon glyphicon-user"></span><img src="../photos/profil.png" alt="" width="30px" height="30px"> Profile</a></li>
                     <li class="nav-item"><a class="nav-link" href="#"> Login / Sign Up </a></li>
                 </ul>
             </div>
