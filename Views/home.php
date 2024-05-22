@@ -70,8 +70,7 @@ function limitWords($string, $word_limit) {
                 <?php for($i = 0 ; $i < 6 ; $i++) : ?>
                     <div class="col-md-4 ">
                         <div class="card" style="width: 18rem;  height: 32rem;">
-                        <img src="../photos/<?php echo $plantes[$i]['photo'] ?>" class="card-img-top" alt="...">
-                            <img src="../photos/health_plant_photos/<?php echo $images[$i]; ?>" class="card-img-top w-100" alt="..." style="height: 200px; object-fit: cover;">
+                            <img src="../<?php echo $images[$i]; ?>" class="card-img-top w-100" alt="..." style="height: 200px; object-fit: cover;">
                             <div class="card-body">
                                 <h5 class="card-title" ><a href="#" style="color:black;"><?php echo $plantes[$i]->getNom_scientifique(); ?></a></h5>
                                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $plantes[$i]->getNom_local();?></h6>

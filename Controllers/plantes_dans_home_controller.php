@@ -62,11 +62,12 @@ $images = array();
 foreach($plantes as $plante){
     $requete3 = "select path_image from images_plantes where id_plante=? LIMIT 1;";
     $result3 = $new_pdo->prepared_request($requete3);
-    $result3->bindParam(1, $plante->getId(),PDO::PARAM_INT);
+    $id_tmp=$plante->getId();
+    $result3->bindParam(1, $id_tmp, PDO::PARAM_INT);
     $result3->execute();
-    $result3 = $result3->fetchAll();
-    if($result3->num_rows > 0 ){
-        $row = $result3->FETCH_ASSOC();
+    $rows = $result3->fetchAll(); // Récupérer toutes les lignes de résultat
+    if(count($rows) > 0 ){ // Vérifier s'il y a des résultats
+        $row = $rows[0]; // Accéder à la première ligne de résultat
         $path = $row['path_image'];
         $images[] = $path;
     }
