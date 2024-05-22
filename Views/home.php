@@ -1,5 +1,11 @@
 <?php
 session_start();
+function limitWords($string, $word_limit) {
+    $words = explode(" ", $string);
+    $words = implode(" ", array_splice($words, 0, $word_limit));
+    $words = $words."...";
+    return $words;
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -17,6 +23,7 @@ session_start();
 <body>
     <?php include("Partials/nav.php") ?>
     <main>
+        <?php include('Partials/alert.php');?>
         <div id="carouselExampleAutoplaying" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item">
@@ -55,76 +62,29 @@ session_start();
                     </p>
                 </div>
             </div>
+
+            <?php require('../Controllers/plantes_dans_home_controller.php');?>
             <div class="container mx-auto mt-4" style="background-color: #ddd;">
                 <div class="row">
+                <?php if (!empty($plantes) && !empty($familles) && !empty($images)) : ?>
+                <?php for($i = 0 ; $i < 6 ; $i++) : ?>
                     <div class="col-md-4 ">
-                        <div class="card" style="width: 18rem;">
-                            <img src="photos/pexels-mattycphoto-682571.jpg" class="card-img-top" alt="...">
+                        <div class="card" style="width: 18rem;  height: 32rem;">
+                        <img src="../photos/<?php echo $plantes[$i]['photo'] ?>" class="card-img-top" alt="...">
+                            <img src="../photos/health_plant_photos/<?php echo $images[$i]; ?>" class="card-img-top w-100" alt="..." style="height: 200px; object-fit: cover;">
                             <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text text-success">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                                <h5 class="card-title" ><a href="#" style="color:black;"><?php echo $plantes[$i]->getNom_scientifique(); ?></a></h5>
+                                <h6 class="card-subtitle mb-2 text-muted"><?php echo $plantes[$i]->getNom_local();?></h6>
+                                <h6 class="card-subtitle mb-2 text-muted" ><a href="#" style="color:black;"><?php echo $familles[$i]->getNom();?></a></h6>
+                                <p class="card-text text-success"><?php echo limitWords($plantes[$i]->getDescription(), 20);?></p>
                                 <a href="#" class=" mr-2 "><button class="submit-btn" type="submit">Explore</button></a>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="photos/pexels-tranmautritam-92327.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text  text-success">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class=" mr-2 "><button class="submit-btn" type="submit">Explore</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="photos/pexels-pixabay-163186.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text text-success">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class=" mr-2 "><button class="submit-btn" type="submit">Explore</button></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="photos/pexels-pixabay-531260.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text text-success">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class=" mr-2 "><button class="submit-btn" type="submit">Explore</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="photos/pexels-pixabay-60639.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text text-success">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class=" mr-2 "><button class="submit-btn" type="submit">Explore</button></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="card" style="width: 18rem;">
-                            <img src="photos/pexels-minan1398-683340.jpg" class="card-img-top" alt="...">
-                            <div class="card-body">
-                                <h5 class="card-title">Card title</h5>
-                                <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-                                <p class="card-text text-success">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                                <a href="#" class=" mr-2 "><button class="submit-btn" type="submit">Explore</button></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php endfor; ?>
+                <?php else : ?>
+                    <h3 >Aucune plante trouvée.</h3>
+                <?php endif; ?>
             </div>
         </section>
     </main>

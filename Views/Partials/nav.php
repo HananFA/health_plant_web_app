@@ -1,3 +1,4 @@
+
 <style>
     .submit-btn {
         background-color: #4CAF50;
@@ -14,6 +15,7 @@
             background-color: #fefefe
         }
     </style>
+    
     <nav class="navbar navbar-dark bg-success navbar-expand-lg shadow fixed-top">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -44,10 +46,11 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item"><a class="nav-link text-white" href="#"><span class="glyphicon glyphicon-user"></span><img src="../photos/profil.png" alt="" width="30px" height="30px"> Profile</a></li>
                     <li class="nav-item dropdown">
-                        <a href="login/login.html" class="nav-link dropdown-toggle text-white " data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Sign Up <span class="caret"></span></a>
+                        <a href="login/login.html" class="nav-link dropdown-toggle text-white " data-toggle="dropdown"><span class="glyphicon glyphicon-log-in"></span> Login / Logout <span class="caret"></span></a>
                         <div class="dropdown-menu">
                             <a href="login/login.html#SignIn" class="dropdown-item text-white bg-success">Login</a>
                             <a href="login/login.html#SignUp" class="dropdown-item text-white bg-success">Sign Up</a>
+                            <a href="login/login.html#SignIn" class="dropdown-item text-white bg-success">Logout</a>
                         </div>
                     </li>
                 </ul>

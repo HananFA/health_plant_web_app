@@ -1,0 +1,43 @@
+.main-body{
+    margin-top:75px;
+    
+}
+.background-container {
+    position: relative;
+    background-image: url('photos/exemple.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    height: 400px; /* Adjust height as needed */
+    color: white; /* Ensure text is readable */
+    border-image: fill 0 linear-gradient(#0001, #000);
+}
+
+.bottom-left-text {
+    text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "Lucida Console", Courier, monospace;
+}
+
+.col-md-4{
+    color:rgb(20, 123, 20);
+    font-family: "Lucida Console", Courier, monospace;
+    font-size:large;
+}
+
+.my-4{
+    border: none;
+    border-top: 1px solid rgb(20, 123, 20); /* Adjust color and width as needed */
+    margin: 1.5rem 0;
+}
+.container .row{
+    margin: 70px 0 30px 0;
+}
+.fas .fa-h1{
+    color:Black;
+    font-family: "Lucida Console", Courier, monospace;
+    margin:20px;
+}

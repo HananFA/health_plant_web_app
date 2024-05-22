@@ -1,6 +1,5 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
-
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +8,12 @@
   background-color: rgba(var(--bs-dark-rgb),);
 }
 
+main{
+  margin-top:75px;
+}
+
 .card{
-  margin: 10px;
+  margin: 10px;  
 }
 .about-us {
   width: 100%;
@@ -223,5 +226,4 @@ ol {
     padding: 10px 0; 
   }
 }
-
 

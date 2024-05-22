@@ -1,10 +1,4 @@
-<?php
-if (isset($_SESSION['message'])) {
-    $message = htmlspecialchars($_SESSION['message']);
-    echo "<script type='text/javascript'>alert('$message');</script>";
-    unset($_SESSION['message']); // Suppression du message de la session
-}
-?>
+
 <style>
     .footer{
     background-color: #c9cec9;
