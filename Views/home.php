@@ -8,7 +8,7 @@ function limitWords($string, $word_limit) {
 }
 ?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -72,11 +72,11 @@ function limitWords($string, $word_limit) {
                         <div class="card" style="width: 18rem;  height: 32rem;">
                             <img src="../<?php echo $images[$i]; ?>" class="card-img-top w-100" alt="..." style="height: 200px; object-fit: cover;">
                             <div class="card-body">
-                                <h5 class="card-title" ><a href="#" style="color:black;"><?php echo $plantes[$i]->getNom_scientifique(); ?></a></h5>
+                                <h5 class="card-title" ><a href="plante_page.php?nom=<?php echo $plantes[$i]->getNom_scientifique();?>" style="color:black;"><?php echo $plantes[$i]->getNom_scientifique(); ?></a></h5>
                                 <h6 class="card-subtitle mb-2 text-muted"><?php echo $plantes[$i]->getNom_local();?></h6>
                                 <h6 class="card-subtitle mb-2 text-muted" ><a href="#" style="color:black;"><?php echo $familles[$i]->getNom();?></a></h6>
                                 <p class="card-text text-success"><?php echo limitWords($plantes[$i]->getDescription(), 20);?></p>
-                                <a href="#" class=" mr-2 "><button class="submit-btn" type="submit">Explore</button></a>
+                                <a href="plante_page.php?nom=<?php echo $plantes[$i]->getNom_scientifique();?>" class=" mr-2 "><button class="submit-btn" type="submit">Explore</button></a>
                             </div>
                         </div>
                     </div>

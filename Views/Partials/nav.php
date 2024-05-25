@@ -31,7 +31,7 @@
                     <li class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle text-white" data-toggle="dropdown">plantes <span class="caret"></span></a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item text-white bg-success">plantes</a>
+                            <a href="./plante_list.php" class="dropdown-item text-white bg-success">plantes</a>
                             <a href="#" class="dropdown-item text-white bg-success">Familles</a>
                         </div>
                     </li>

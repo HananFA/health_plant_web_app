@@ -48,7 +48,7 @@
 }
 
 </style>
-<footer class="footer bg-custom">
+<footer class="footer bg-custom text-dark">
     <div class="container-fluid py-5">
         <div class="row">
             <div class="col-md-6">

@@ -7,6 +7,7 @@ class Plante_medicinale{
     private $propriete;
     private $images = array();
     private $id_famille;
+    private $location;
 
     public function getId(){
         return $this->id;
@@ -28,6 +29,9 @@ class Plante_medicinale{
     }
     public function getId_famille(){
         return $this->id;
+    }
+    public function getLocation(){
+        return $this->location;
     }
 
     public function setId($n_id){
@@ -51,6 +55,8 @@ class Plante_medicinale{
     public function setId_famille($n_id_f){
         $this->id_famille = $n_id_f;
     }
-
+    public function setLocation($n_locs){
+        $this->location = $n_locs;
+    }
 }
 ?>

@@ -1,9 +1,6 @@
 <?php
 require_once('Message_signal.php');
 class Visiteur{
-    public function login(){
-        echo '';
-    }
 
     public function sign_up(){
         echo '';
